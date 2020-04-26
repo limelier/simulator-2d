@@ -1,7 +1,7 @@
-use crate::sim::direction::Direction;
+use crate::board::Direction;
 
 #[derive(Copy, Clone, Debug, Eq, PartialEq)]
-pub(crate) struct Position {
+pub struct Position {
     pub(crate) row: usize,
     pub(crate) col: usize,
 }

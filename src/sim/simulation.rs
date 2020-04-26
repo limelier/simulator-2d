@@ -1,5 +1,5 @@
 use crate::sim::instruction::Instruction;
-use crate::sim::board::Board;
+use crate::board::Board;
 use crate::sim::robot::Robot;
 
 pub struct Simulation<'a> {
@@ -48,9 +48,7 @@ impl Simulation<'_> {
 #[cfg(test)]
 mod test {
     use super::*;
-    use crate::sim::position::Position;
-    use crate::sim::direction::Direction;
-    use crate::sim::TurnDirection;
+    use crate::board::{Position, Direction, TurnDirection};
 
     #[test]
     fn init_works_as_expected() {

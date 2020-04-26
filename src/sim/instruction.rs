@@ -1,4 +1,4 @@
-use crate::sim::turn_direction::TurnDirection;
+use crate::board::TurnDirection;
 
 pub enum Instruction {
     Turn(TurnDirection),

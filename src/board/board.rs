@@ -1,6 +1,6 @@
 use std::fmt::{Debug, Formatter};
 use std::fmt;
-use crate::sim::position::Position;
+use crate::board::Position;
 
 #[derive(Clone)]
 pub struct Board {

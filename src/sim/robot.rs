@@ -1,5 +1,4 @@
-use crate::sim::direction::Direction;
-use crate::sim::position::Position;
+use crate::board::{Position, Direction};
 
 pub(crate) struct Robot {
     pub(crate) direction: Direction,
