@@ -1,6 +1,6 @@
 use crate::sim::turn_direction::TurnDirection;
 
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq)]
 pub(crate) enum Direction {
     North,
     South,

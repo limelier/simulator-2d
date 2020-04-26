@@ -27,13 +27,20 @@ impl Board {
         }
     }
 
-    fn size(&self) -> usize {
+    pub(crate) fn size(&self) -> usize {
         self.tiles.len()
     }
 
     pub(crate) fn in_bounds(&self, pos: &Position) -> bool {
         let size = self.size();
         pos.col < size && pos.row <= size
+    }
+}
+
+#[cfg(test)]
+impl Board {
+    pub(crate) fn check(&self, row: usize, col: usize) -> bool {
+        self.tiles[row][col]
     }
 }
 
