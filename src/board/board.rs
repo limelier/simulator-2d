@@ -2,7 +2,7 @@ use std::fmt::{Debug, Formatter};
 use std::fmt;
 use crate::board::Position;
 
-#[derive(Clone)]
+#[derive(Clone, Eq, PartialEq)]
 pub struct Board {
     tiles: Vec<Vec<bool>>
 }
