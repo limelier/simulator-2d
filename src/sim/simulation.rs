@@ -28,14 +28,16 @@ impl Simulation<'_> {
             Instruction::Move => {
                 let new_pos = robot.position.shifted(robot.direction);
                 if let Some(new_pos) = new_pos {
-                    robot.position = new_pos;
+                    if self.board.in_bounds(&new_pos) {
+                        robot.position = new_pos;
+                    }
                 }
             }
             Instruction::Turn(dir) => {
                 robot.direction = robot.direction.turned(dir);
             }
             Instruction::Place => {
-                self.board.set(robot.position, true)
+                self.board.set(robot.position, true);
             }
         }
     }

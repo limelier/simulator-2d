@@ -31,7 +31,7 @@ impl Board {
         self.tiles.len()
     }
 
-    fn in_bounds(&self, pos: &Position) -> bool {
+    pub(crate) fn in_bounds(&self, pos: &Position) -> bool {
         let size = self.size();
         pos.col < size && pos.row <= size
     }
